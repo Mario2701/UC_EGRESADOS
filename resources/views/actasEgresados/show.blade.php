@@ -1,4 +1,4 @@
-@extends('layouts.plantillaShowActaEgresado')
+@extends('adminlte::page')
 @section('title','Acta del egresado con id: ' . $acta->id)
 
 @section('content')

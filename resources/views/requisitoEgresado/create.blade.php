@@ -1,4 +1,4 @@
-@extends('layouts.plantillaCreateRequisitoEgresado')
+@extends('adminlte::page')
 
 @section('title', 'Nuevo Registro')
 

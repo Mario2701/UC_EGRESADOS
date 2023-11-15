@@ -1,4 +1,4 @@
-@extends('layouts.plantillaCreateTipoCargo')
+@extends('adminlte::page')
 @section('title','Nuevo Registro')
 
 @section('content')

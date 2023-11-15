@@ -1,4 +1,4 @@
-@extends('layouts.plantillaCreateFormatoEvaluacion')
+@extends('adminlte::page')
 @section('title','Nuevo Registro')
 @section('content')
     <h1>Aqui podras crear registros de formatos de evaluaciones</h1>

@@ -15,7 +15,10 @@ use Illuminate\Database\Eloquent\Casts\Attribute;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable, HasRoles;
+    use HasApiTokens,
+        HasFactory,
+        Notifiable,
+        HasRoles;
     protected $table = "users";
 
 

@@ -1,4 +1,4 @@
-@extends('layouts.plantillaCreateEvaluacionTrabajo')
+@extends('adminlte::page')
 @section('title','Nuevo Registro')
 @section('content')
     <h1>Aqui podras crear registros evaluacionde trabajos</h1>

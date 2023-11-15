@@ -1,4 +1,4 @@
-@extends('layouts.plantillaShowEvaluacionEgresado')
+@extends('adminlte::page')
 @section('title','Empresa: ' . $evaluacion->id)
 @section('content')
     <h1>Codigo de Evaluacion: {{$evaluacion->id}}</h1>

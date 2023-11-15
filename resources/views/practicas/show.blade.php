@@ -1,4 +1,4 @@
-@extends('layouts.plantillaShow')
+@extends('adminlte::page')
 @section('title','Practica: ' . $practica->titulo)
 @section('content')
     <h1>Bienvenido al procedimiento: {{$practica->titulo}}</h1>

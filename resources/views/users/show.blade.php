@@ -1,4 +1,4 @@
-@extends('layouts.plantillaShowTipoCargo')
+@extends('adminlte::page')
 @section('title','Detalles del usuario')
 
 @section('content')

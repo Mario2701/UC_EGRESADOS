@@ -1,4 +1,4 @@
-@extends('layouts.plantillaShowEgresado')
+@extends('adminlte::page')
 @section('title','Bienvenido: ' . $egresado->nombre_egresado)
 @section('content')
     <h1>Bienvenido : {{$egresado->nombre_egresado}}</h1>

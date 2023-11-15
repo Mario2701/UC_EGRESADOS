@@ -1,4 +1,4 @@
-@extends('layouts.plantillaShowEmpresa')
+@extends('adminlte::page')
 @section('title','Empresa: ' . $empresa->nombre_empresa)
 @section('content')
     <h1>Empresa: {{$empresa->nombre_empresa}}</h1>

@@ -1,4 +1,4 @@
-@extends('layouts.plantillaCreateEvaluacionEgresado')
+@extends('adminlte::page')
 @section('title','Nuevo Registro')
 @section('content')
     <h1>Aqui podras crear registros para la evaluacion de egresados por empresa</h1>

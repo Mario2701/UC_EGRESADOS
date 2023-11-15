@@ -16,24 +16,35 @@ use App\Http\Controllers\RequisitoEgresadoController;
 use App\Http\Controllers\TipoCargoController;
 use App\Http\Controllers\ReunionController; 
 use App\Http\Controllers\UserController; 
+use App\Http\Controllers\ExportController; 
 
 Auth::routes();
+Route::view('nosotros','nosotros')->name('nosotros')->middleware('auth:sanctum');
 Route::get('/',[App\Http\Controllers\Admin\HomeController::class, 'index'])->name('admin.home')->middleware('auth:sanctum');
 Route::resource('usuarios', UserController::class)->middleware('auth:sanctum');
-Route::view('nosotros','nosotros')->name('nosotros')->middleware('auth:sanctum');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth:sanctum');
-//Route::resource('actas', ActaEgresadoController::class);
-//Route::resource('cronogramas/egresados', CronogramaEgresadoController::class)->middleware('auth:sanctum');
-//Route::resource('egresados', EgresadoController::class)->middleware('auth:sanctum');
-//Route::resource('empresas', EmpresaController::class)->middleware('auth:sanctum');
-//Route::resource('evaluaciones/egresados', EvaluacionEgresadoController::class)->middleware('auth:sanctum');
-//Route::resource('evaluaciones/trabajos', EvaluacionTrabajoController::class)->middleware('auth:sanctum');
-//Route::resource('formatos/evaluaciones', FormatoEvaluacionController::class)->middleware('auth:sanctum');
-//Route::resource('juntas/directivas', JuntaDirectivaController::class)->middleware('auth:sanctum');
-//Route::resource('planes/trabajos', PlanTrabajoController::class)->middleware('auth:sanctum');
-//Route::resource('requisitos/egresados', RequisitoEgresadoController::class);
-//Route::resource('reuniones', ReunionController::class)->middleware('auth:sanctum');
-//Route::resource('tipos/cargo', TipoCargoController::class)->middleware('auth:sanctum');
+
+
+
+// Route::middleware(['auth:sanctum'])->group(function(){
+// });
+Route::middleware(['auth:sanctum', 'role:egresado'])->group(function () {
+    // Rutas para Egresados    
+});
+
+Route::middleware(['auth:sanctum', 'role:admin'])->group(function () {
+    // Rutas para Administradores
+});
+
+Route::controller(CronogramaEgresadoController::class)->middleware('auth:sanctum')->group(function(){
+    Route::get('cronogramas/egresados','index')->name('cronogramasEgresados.index');
+    Route::get('cronogramas/egresados/create','create')->name('cronogramasEgresados.create');
+    Route::post('cronogramas/egresados','store')->name('cronogramasEgresados.store');
+    Route::get('cronogramas/egresados/{cronograma}','show')->name('cronogramasEgresados.show');
+    Route::get('cronogramas/egresados/{cronograma}/edit','edit')->name('cronogramasEgresados.edit');
+    Route::put('cronogramas/egresados/{cronograma}', 'update')->name('cronogramasEgresados.update');
+    Route::delete('cronogramas/{cronograma}', 'destroy')->name('cronogramasEgresados.destroy');
+});
 
 Route::controller(PracticaController::class)->group(function(){
     Route::get('practicas','index')->name('practicas.index');
@@ -56,19 +67,9 @@ Route::controller(ActaEgresadoController::class)->middleware('auth:sanctum')->gr
     Route::delete('actas/{acta}', 'destroy')->name('actasEgresados.destroy');
 });
 
-
-Route::controller(CronogramaEgresadoController::class)->middleware('auth:sanctum')->group(function(){
-    Route::get('cronogramas/egresados','index')->name('cronogramasEgresados.index');
-    Route::get('cronogramas/egresados/create','create')->name('cronogramasEgresados.create');
-    Route::post('cronogramas/egresados','store')->name('cronogramasEgresados.store');
-    Route::get('cronogramas/egresados/{cronograma}','show')->name('cronogramasEgresados.show');
-    Route::get('cronogramas/egresados/{cronograma}/edit','edit')->name('cronogramasEgresados.edit');
-    Route::put('cronogramas/egresados/{cronograma}', 'update')->name('cronogramasEgresados.update');
-    Route::delete('cronogramas/{cronograma}', 'destroy')->name('cronogramasEgresados.destroy');
-});
-
 Route::controller(EgresadoController::class)->middleware('auth:sanctum')->group(function(){
     Route::get('egresados','index')->name('egresados.index');
+    Route::get('egresados/Eg','indexE')->name('egresados.indexE');
     Route::get('egresados/create','create')->name('egresados.create');
     Route::post('egresados','store')->name('egresados.store');
     Route::get('egresados/{egresado}','show')->name('egresados.show');
@@ -116,7 +117,6 @@ Route::controller(FormatoEvaluacionController::class)->middleware('auth:sanctum'
     Route::put('formatos/evaluaciones/{formato}', 'update')->name('formatoEvaluacion.update');
     Route::delete('formatos/evaluaciones/{formato}', 'destroy')->name('formatoEvaluacion.destroy');
 });
-
 
 Route::controller(JuntaDirectivaController::class)->middleware('auth:sanctum')->group(function(){
     Route::get('juntas/directivas','index')->name('juntaDirectiva.index');
@@ -167,3 +167,9 @@ Route::controller(TipoCargoController::class)->middleware('auth:sanctum')->group
     Route::put('tipos/cargos/{tipo}', 'update')->name('tipoCargos.update');
     Route::delete('tipos/cargos/{tipo}', 'destroy')->name('tipoCargos.destroy');
 });
+
+Route::middleware('auth:sanctum')->group(function () {
+    Route::get('export/archivo', [ExportController::class, 'pageExport'])->name('export.pageExport');
+    Route::get('export/file', [ExportController::class, 'export'])->name('export.export');
+});
+

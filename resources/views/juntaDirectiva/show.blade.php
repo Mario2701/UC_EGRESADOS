@@ -1,4 +1,4 @@
-@extends('layouts.plantillaShowJuntaDirectiva')
+@extends('adminlte::page')
 @section('title','Junta directiva: ' . $junta->id )
 @section('content')
     <h1>Codigo del egresado: {{$junta->egresado_id}}</h1>

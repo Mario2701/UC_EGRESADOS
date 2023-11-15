@@ -1,4 +1,4 @@
-@extends('layouts.plantillaShowFormatoEvaluacion')
+@extends('adminlte::page')
 @section('title','Formto: ' . $formato->id)
 @section('content')
     <h1>Codigo del formato: {{$formato->id}}</h1>

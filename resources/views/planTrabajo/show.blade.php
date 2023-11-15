@@ -1,4 +1,4 @@
-@extends('layouts.plantillaShowPlanTrabajo')
+@extends('adminlte::page')
 @section('title','Id del plan: ' . $plan->cronograma_egresado_id)
 @section('content')
     <h1>El id del plan de trabajo es: {{$plan->cronograma_egresado_id}}</h1>

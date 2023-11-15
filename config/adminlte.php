@@ -313,183 +313,120 @@ return [
         ],
 
         [
-            'text' => 'Dashboard',
+            'text' => 'Inicio',
             'route' => 'admin.home',    
+            'icon' => 'fas fa-house-damage',
         ],
+
+        // Administrador:
         [
-            'text' =>'Macroprocesos',
-            'icon' =>'fas fa-fw fa-share',
+            'text' => 'Administrador',
+            'url' => '#',
+            'icon' => 'fas fa-user-tie',
+            
             'submenu' => [
                 [
-                    'text' => 'Estrategicos',
-                    'url' => '#',
-                    'submenu' => [
-                        
-                        [
-                            'text' => 'Direccionamiento Estrategico',
-                            'url' => '#',
-                        ],
-                        [
-                            'text' => 'Gestion para Organizaciones Educativas',
-                        ],
-                        [
-                            'text' => 'Responsabilidad Social',
-                            'url' => '#',
-                        ],
-                        [
-                            'text' => 'Gestion Ambiental',
-                            'url' => '#',
-                        ],
-
-                    ],
+                    'text' => ' Gestión de Usuarios',
+                    'url' => 'usuarios',
+                    'icon' => 'fas fa-solid fa-check',
                 ],
 
                 [
-                    'text' => 'Misionales',
-                    'url' => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'Seguimiento al egresado',
-                            'url' => '#',
-                            'submenu' =>[
-                                [
-                                    'text' => 'Usuarios',
-                                    'url' => 'usuarios',
-                                ],
-                                [
-                                    'text' => 'Acta de Egresado',
-                                    'url' => 'actas',
-                                ],
-                                [
-                                    'text' => 'Cronograma de Egresado',
-                                    'url' => 'cronogramas/egresados',
-                                ],
-                                [
-                                    'text' => 'Egresado',
-                                    'url' => 'egresados',
-                                ],
-                                [
-                                    'text' => 'Empresa',
-                                    'url' => 'empresas',
-                                ],
-                                [
-                                    'text' => 'Evaluacion de Egresados',
-                                    'url' => 'evaluaciones/egresados',
-                                ],
-                                [
-                                    'text' => 'Evaluacion de Trabajo',
-                                    'url' => 'evaluaciones/trabajos',
-                                ],
-                                [
-                                    'text' => 'Formato de Evaluacion',
-                                    'url' => 'formatos/evaluaciones',
-                                ],
-                                [
-                                    'text' => 'Junta Directiva',
-                                    'url' => 'juntas/directivas',
-                                ],
-                                [
-                                    'text' => 'Plan Trabajo',
-                                    'url' => 'planes/trabajos',
-                                ],
-                                [
-                                    'text' => 'Requisito de Egresado',
-                                    'url' => 'requisitos/egresados',
-                                ],
-                                [
-                                    'text' => 'Reunion',
-                                    'url' => 'reuniones',
-                                ],
-                                [
-                                    'text' => 'Tipo de Cargo',
-                                    'url' => 'tipos/cargos',
-                                ],
-                            ],
-                            
-                        ],
-                    ],
+                    'text' => 'Junta Directiva',
+                    'url' => 'juntas/directivas',
+                    'icon' => 'fas fa-solid fa-check',
                 ],
 
                 [
-                    'text' => 'De Soporte',
-                    'url' => '#',
+                    'text' => 'Acta de Egresado',
+                    'url' => 'actas',
+                    'icon' => 'fas fa-solid fa-check',
                 ],
-
-            ],
+                [
+                    'text' => 'Cronograma de Egresado',
+                    'url' => 'cronogramas/egresados',
+                    'icon' => 'fas fa-solid fa-check',
+                ],
+                [
+                    'text' => 'Egresado',
+                    'url' => 'egresados',
+                    'icon' => 'fas fa-solid fa-check',
+                ],
+                [
+                    'text' => 'Empresa',
+                    'url' => 'empresas',
+                    'icon' => 'fas fa-solid fa-check',
+                ],
+                [
+                    'text' => 'Evaluacion de Egresados',
+                    'url' => 'evaluaciones/egresados',
+                    'icon' => 'fas fa-solid fa-check',
+                ],
+                [
+                    'text' => 'Evaluacion de Trabajo',
+                    'url' => 'evaluaciones/trabajos',
+                    'icon' => 'fas fa-solid fa-check',
+                ],
+                [
+                    'text' => 'Formato de Evaluacion',
+                    'url' => 'formatos/evaluaciones',
+                    'icon' => 'fas fa-solid fa-check',
+                ],
+        
+                [
+                    'text' => 'Plan Trabajo',
+                    'url' => 'planes/trabajos',
+                    'icon' => 'fas fa-solid fa-check',
+                ],
+                [
+                    'text' => 'Requisito de Egresado',
+                    'url' => 'requisitos/egresados',
+                    'icon' => 'fas fa-solid fa-check',
+                ],
+                [
+                    'text' => 'Reunion',
+                    'url' => 'reuniones',
+                    'icon' => 'fas fa-solid fa-check',
+                ],
+            ], 
         ],
 
+
+        // Egresados:
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],
-        ['header' => 'account_settings'],
-        [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
+            'text' => 'Egresado',
+            'url' => '#',
+            'icon' => 'fas fa-regular fa-users',
             'submenu' => [
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Datos personales',
+                    'url' => 'egresados/Eg',
+                    'icon' => 'fas fa-solid fa-check',
                 ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-            ],
+            ], 
         ],
-        ['header' => 'labels'],
+
+
+
+        // Otros
+
+        
+
+
+
+
+        ['header' => 'CONFIGURACIÓN DE CUENTA'],
         [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
+            'text' => 'Perfil',
+            'url'  => 'admin/settings',
+            'icon' => 'fas fa-wrench',
         ],
         [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
+            'text' => 'Modificar contraseña',
+            'url'  => 'admin/settings',
+            'icon' => 'fas fa-unlock',
         ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
-        ],
+
     ],
 
     /*

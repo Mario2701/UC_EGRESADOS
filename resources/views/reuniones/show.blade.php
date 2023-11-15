@@ -1,4 +1,4 @@
-@extends('layouts.plantillaShowReunion')
+@extends('adminlte::page')
 @section('title','Id de la reunion: ' . $reunion->id)
 @section('content')
     <h1>El id de la reunion es: {{$reunion->id}}</h1>

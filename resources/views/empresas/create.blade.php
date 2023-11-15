@@ -1,4 +1,4 @@
-@extends('layouts.plantillaCreateEmpresa')
+@extends('adminlte::page')
 @section('title','Nuevo Registro')
 @section('content')
     <h1>Aqui podras crear registros para cada empresa nueva</h1>

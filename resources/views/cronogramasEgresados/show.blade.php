@@ -1,4 +1,4 @@
-@extends('layouts.plantillaShowCronogramaEgresado')
+@extends('adminlte::page')
 @section('title','Conograma del egresado con id: ' . $cronograma->numero_cronograma)
 @section('content')
     <h1>Bienvenido al cronograma del egresado con id: {{$cronograma->numero_cronograma}}</h1>

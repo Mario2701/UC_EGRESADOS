@@ -1,4 +1,4 @@
-@extends('layouts.plantillaShowRequisitoEgresado')
+@extends('adminlte::page')
 @section('title','Id del requsito: ' . $requisito->id)
 @section('content')
 <h1 style="text-align: center;">El id del requisito es: {{$requisito->id}}</h1>

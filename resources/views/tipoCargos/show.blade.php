@@ -1,4 +1,4 @@
-@extends('layouts.plantillaShowTipoCargo')
+@extends('adminlte::page')
 @section('title','Id del cargo: ' . $tipo->id)
 @section('content')
     <h1>El id del tipo de cargo es: {{$tipo->id }}</h1>

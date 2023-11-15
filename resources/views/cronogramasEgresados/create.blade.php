@@ -1,3 +1,4 @@
+@extends('adminlte::page')    
     h1 {
         font-size: 24px;
         font-weight: bold;

@@ -1,4 +1,4 @@
-@extends('layouts.plantillaCreateReunion')
+@extends('adminlte::page')
 @section('title','Nuevo Registro')
 @section('content')
     <h1>Aqui podras crear registros</h1>

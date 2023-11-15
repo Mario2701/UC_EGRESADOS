@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Egresados;
+use App\Models\User;
 
 class EgresadoController extends Controller
 {
@@ -11,7 +12,25 @@ class EgresadoController extends Controller
     public function index(){
         //usamos las sentencias de eloquent
         $egresados = Egresados::orderBy('id','desc')->paginate();
+
         return view("egresados.index", compact('egresados'));
+    }
+
+    public function indexE()
+    {
+        // Obtener el email del usuario actualmente autenticado
+        $userEmail = auth()->user()->email;
+
+        // Buscar el egresado correspondiente en la tabla 'Egresados' basándote en el email
+        $egresado = Egresados::where('email', $userEmail)->first();
+
+        // Si se encontró un egresado, también busca el usuario correspondiente en la tabla 'User'
+        $user = null;
+        if ($egresado) {
+            $user = User::where('email', $userEmail)->first();
+        }
+
+        return view("egresados.indexE", compact('egresado', 'user'));
     }
     
     //metodo para crear un nuevo registro de practicante
