@@ -46,16 +46,19 @@
                         </blockquote>
                     </div>
                 </div>
+
+
                 <div class="card">
                 <div class="card-header">
-                        <h4>Fecha de egreso :</h4>
+                        <h4>Edad Egresado:</h4>
                     </div>
                     <div class="card-body" style="height: 120px; overflow-y: auto;">
                         <blockquote class="blockquote mb-0">
-                            <p>{{ $egresado->fecha_egreso_egresado }}</p>
+                            <p>{{ $egresado->edad_al_egresar}}</p>
                         </blockquote>
                     </div>
                 </div>
+
                 <div class="card">
                 <div class="card-header">
                         <h4>Cargo empresa :</h4>
@@ -66,6 +69,7 @@
                         </blockquote>
                     </div>
                 </div>
+
                 <div class="card">
                 <div class="card-header">
                         <h4>Tiempo Laboral :</h4>

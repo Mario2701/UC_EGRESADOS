@@ -332,6 +332,18 @@ return [
                 ],
 
                 [
+                    'text' => 'Egresado',
+                    'url' => 'egresados',
+                    'icon' => 'fas fa-solid fa-check',
+                ],
+
+                [
+                    'text' => 'Graficos y Reporte',
+                    'url' => 'egresados/charts',
+                    'icon' => 'fas fa-solid fa-check',
+                ],
+
+                [
                     'text' => 'Junta Directiva',
                     'url' => 'juntas/directivas',
                     'icon' => 'fas fa-solid fa-check',
@@ -347,11 +359,7 @@ return [
                     'url' => 'cronogramas/egresados',
                     'icon' => 'fas fa-solid fa-check',
                 ],
-                [
-                    'text' => 'Egresado',
-                    'url' => 'egresados',
-                    'icon' => 'fas fa-solid fa-check',
-                ],
+
                 [
                     'text' => 'Empresa',
                     'url' => 'empresas',

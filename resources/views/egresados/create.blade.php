@@ -21,26 +21,49 @@
             <br>
             <input type="text" name="especializacion_egresado">
         </label>
+
+
+
+
+
         <br><br>
-        <label> Fecha de egreso:
+        <label> Edad al egresar:
             <br>
-            <input type="datetime" name="fecha_egreso_egresado">
+            <input type="number" name="edad_al_egresar">
         </label>
         <br><br>
-        <label> Fecha de titulo:
+        <label> N° publicaciones academicas:
             <br>
-            <input type="datetime" name="fecha_titulo_egresado">
+            <input type="number" name="publicaciones_academicas">
         </label>
         <br><br>
-        <label> Fecha de maestria:
+        <label> Puntaje de certificación:
             <br>
-            <input type="datetime" name="fecha_maestria_egresado">
+            <input type="number" name="puntaje_certificacion">
         </label>
         <br><br>
-        <label> Fecha de doctorado:
+        <label> N° de idiomas:
             <br>
-            <input type="datetime" name="fecha_doctorado_egresado">
+            <input type="number" name="num_idiomas_hablados">
         </label>
+        <br><br>
+        <label> N° proyectos de investigación:
+            <br>
+            <input type="number" name="proyectos_investigacion">
+        </label>
+        <br><br>
+        <label> N° habilidades certificadas:
+            <br>
+            <input type="number" name="habilidades_certificadas">
+        </label>
+        <br><br>
+        <label> N° sueldo actual:
+            <br>
+            <input type="number" name="sueldo_actual">
+        </label>
+
+
+
         <br><br>
         <label> Empresa donde labora:
             <br>
@@ -54,7 +77,7 @@
         <br><br>
         <label> Tiempo que labora:
             <br>
-            <input type="text" name="tiempo_laboral_egresado">
+            <input type="number" name="tiempo_laboral_egresado">
         </label>
         <br><br>
 

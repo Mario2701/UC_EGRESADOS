@@ -11,7 +11,7 @@ class Egresados extends Model
     use HasFactory;
     protected $table = "egresados";
 
-        //metodo para relacion de 1 a 1
+    //metodo para relacion de 1 a 1
     public function juntaDirectivaEgresados() {
         return $this->hasOne('App\Models\JuntaDirectaEgresados', 'egresado_id');
     }

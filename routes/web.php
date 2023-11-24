@@ -71,11 +71,13 @@ Route::controller(EgresadoController::class)->middleware('auth:sanctum')->group(
     Route::get('egresados','index')->name('egresados.index');
     Route::get('egresados/Eg','indexE')->name('egresados.indexE');
     Route::get('egresados/create','create')->name('egresados.create');
+    Route::get('egresados/charts', 'showCharts')->name('egresados.charts');
     Route::post('egresados','store')->name('egresados.store');
     Route::get('egresados/{egresado}','show')->name('egresados.show');
     Route::get('egresados/{egresado}/edit','edit')->name('egresados.edit');
     Route::put('egresados/{egresado}', 'update')->name('egresados.update');
     Route::delete('egresados/{egresado}', 'destroy')->name('egresados.destroy');
+    
 });
 
 Route::controller(EmpresaController::class)->middleware('auth:sanctum')->group(function(){

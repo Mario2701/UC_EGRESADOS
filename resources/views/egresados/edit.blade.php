@@ -26,25 +26,86 @@
             <input type="text" class="form-control" id="especializacion_egresado" name="especializacion_egresado" value="{{ $egresado->especializacion_egresado }}">
         </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <div class="form-group">
-            <label for="fecha_egreso_egresado">Fecha de Egreso:</label>
-            <input type="datetime" class="form-control" id="fecha_egreso_egresado" name="fecha_egreso_egresado" value="{{ $egresado->fecha_egreso_egresado }}">
+            <label for="edad_al_egresar">Edad al egresar:</label>
+            <input type="number" class="form-control" id="edad_al_egresar" name="edad_al_egresar" value="{{ $egresado->edad_al_egresar}}">
         </div>
 
         <div class="form-group">
-            <label for="fecha_titulo_egresado">Fecha de titulo:</label>
-            <input type="datetime" class="form-control" id="fecha_titulo" name="fecha_titulo_egresado" value="{{$egresado->fecha_titulo_egresado}}">
+            <label for="publicaciones_academicas">N° de publicaciones academicas:</label>
+            <input type="number" class="form-control" id="publicaciones_academicas" name="publicaciones_academicas" value="{{$egresado->publicaciones_academicas}}">
         </div>
 
         <div class="form-group">
-            <label for="fecha_maestria_egresado">Fecha de maestría:</label>
-            <input type="datetime" class="form-control" id="fecha_titulo" name="fecha_maestria_egresado" value="{{$egresado->fecha_maestria_egresado}}">
+            <label for="puntaje_certificacion">Puntaje de certificación:</label>
+            <input type="number" class="form-control" id="puntaje_certificacion" name="puntaje_certificacion" value="{{$egresado->puntaje_certificacion}}">
         </div>
 
         <div class="form-group">
-            <label for="fecha_doctorado_egresado">Fecha de doctorado:</label>
-            <input type="datetime" class="form-control" id="fecha_titulo" name="fecha_doctorado_egresado" value="{{$egresado->fecha_doctorado_egresado}}">
+            <label for="num_idiomas_hablados">N° de idiomas:</label>
+            <input type="number" class="form-control" id="num_idiomas_hablados" name="num_idiomas_hablados" value="{{$egresado->num_idiomas_hablados}}">
         </div>
+
+        <div class="form-group">
+            <label for="proyectos_investigacion">N° de proyectos de investigación:</label>
+            <input type="number" class="form-control" id="proyectos_investigacion" name="proyectos_investigacion" value="{{$egresado->proyectos_investigacion}}">
+        </div>
+        <div class="form-group">
+            <label for="habilidades_certificadas">N° de habilidades certificadas:</label>
+            <input type="number" class="form-control" id="num_idiomas_hablados" name="habilidades_certificadas" value="{{$egresado->habilidades_certificadas}}">
+        </div>
+        <div class="form-group">
+            <label for="sueldo_actual">N° de sueldo actual:</label>
+            <input type="number" class="form-control" id="sueldo_actual" name="sueldo_actual" value="{{$egresado->sueldo_actual}}">
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <div class="form-group">
             <label for="empresa_id">Id de empresa:</label>
@@ -60,7 +121,7 @@
 
         <div class="form-group">
             <label for="tiempo_laboral_egresado">Tiempo laboral:</label>
-            <input type="datetime" class="form-control" id="tiempo_laboral_egresado" name="tiempo_laboral_egresado" value="{{$egresado->tiempo_laboral_egresado}}">
+            <input type="number" class="form-control" id="tiempo_laboral_egresado" name="tiempo_laboral_egresado" value="{{$egresado->tiempo_laboral_egresado}}">
         </div>
 
         
